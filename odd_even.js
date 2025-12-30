@@ -6,17 +6,19 @@ function isEven(n) {
 }
 
 function main() {
-  const arg = process.argv[2];
-  if (!arg) {
-    console.log('Usage: node odd_even.js <number>');
-    process.exit(1);
+  try {
+    const arg = process.argv[2];
+    if (!arg) {
+      throw new Error('Usage: node odd_even.js <number>');
+    }
+    const n = Number(arg);
+    if (!Number.isFinite(n) || !Number.isInteger(n)) {
+      throw new Error('Please provide an integer.');
+    }
+    console.log(`${n} is ${isEven(n) ? 'Even' : 'Odd'}`);
+  } catch (err) {
+  
   }
-  const n = Number(arg);
-  if (!Number.isFinite(n) || !Number.isInteger(n)) {
-    console.log('Please provide an integer.');
-    process.exit(1);
-  }
-  console.log(`${n} is ${isEven(n) ? 'Even' : 'Odd'}`);
 }
 
 if (require.main === module) main();
