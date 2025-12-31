@@ -17,10 +17,20 @@ function main() {
     }
     console.log(`${n} is ${isEven(n) ? 'Even' : 'Odd'}`);
   } catch (err) {
-  
+      console.log(`${n} is ${isEven(n) ? 'Even' : 'Odd'}`);
+
   }
 }
 
 if (require.main === module) main();
 
 module.exports = { isEven };
+
+
+//ngrok http 3001
+
+// code review
+// code quality
+// secirity
+// performance
+
