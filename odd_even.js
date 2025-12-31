@@ -29,3 +29,8 @@ module.exports = { isEven };
 
 //ngrok http 3001
 
+// code review
+// code quality
+// secirity
+// performance
+
